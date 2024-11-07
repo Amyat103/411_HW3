@@ -8,4 +8,5 @@ CREATE TABLE meals (
     battles INTEGER DEFAULT 0,
     wins INTEGER DEFAULT 0,
     deleted BOOLEAN DEFAULT FALSE
+    UNIQUE(meal, cuisine, price)
 );
