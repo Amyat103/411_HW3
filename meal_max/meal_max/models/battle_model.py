@@ -11,10 +11,10 @@ configure_logger(logger)
 
 class BattleModel:
     """
-    A class to manage the battles between meals
+    A class to manage the battles between meals.
 
     Attributes:
-        combatants(List[Meal]): A list of Meal/Combatant
+        combatants(List[Meal]): A list of Meal/Combatant.
     """
 
     def __init__(self):
@@ -25,16 +25,13 @@ class BattleModel:
 
     def battle(self) -> str:
         """
-        Battle logic for two combatants from List[Meal]
-
-        Args:
-            None
+        Battle logic for two combatants from List[Meal].
 
         Raises:
-            ValueError: If there are not enough combatants to start a battle
+            ValueError: If there are not enough combatants to start a battle.
 
         Returns:
-            str: The name of the winner
+            str: The name of the winner.
         """
         logger.info("Two meals enter, one meal leaves!")
 
@@ -92,16 +89,7 @@ class BattleModel:
 
     def clear_combatants(self):
         """
-        Clear the list of combatants from the List[Meal]
-
-        Args:
-            None
-
-        Raises:
-            None
-
-        Returns:
-            None
+        Clear the list of combatants from the List[Meal].
         """
         logger.info("Clearing the combatants list.")
         self.combatants.clear()
@@ -111,13 +99,10 @@ class BattleModel:
         Calculate the battle score for a given combatant
 
         Args:
-            combatant (Meal): The combatant to calculate the score for
-
-        Raises:
-            None
+            combatant (Meal): The combatant to calculate the score for.
 
         Returns:
-            float: The calculated battle score
+            float: The calculated battle score.
         """
         difficulty_modifier = {"HIGH": 1, "MED": 2, "LOW": 3}
 
@@ -142,16 +127,10 @@ class BattleModel:
 
     def get_combatants(self) -> List[Meal]:
         """
-        Retrieve the current list of combatants
-
-        Args:
-            None
-
-        Raises:
-            None
+        Retrieve the current list of combatants.
 
         Returns:
-            List[Meal]: The current list of combatants
+            List[Meal]: The current list of combatants.
         """
         logger.info("Retrieving current list of combatants.")
         return self.combatants
@@ -161,13 +140,10 @@ class BattleModel:
         Add a combatant to the list of combatants
 
         Args:
-            combatant_data (Meal): The combatant to add to the list
+            combatant_data (Meal): The combatant to add to the list.
 
         Raises:
-            ValueError: If the combatants list is full
-
-        Returns:
-            None
+            ValueError: If the combatants list is full.
         """
         if len(self.combatants) >= 2:
             logger.error(
